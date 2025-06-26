@@ -51,6 +51,9 @@ header {
     box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
     /* border-radius: 20px; */
     /* border: 2px solid rgba(255, 255, 255, 0.1); */
+}
+
+.header-image.desktop {
     margin-bottom: 40px;
 }
 
@@ -192,6 +195,7 @@ header {
 }
 
 /* Плашка с концертом */
+
 .concert-banner {
     /* position: relative; */
     /* z-index: 3; */
@@ -203,7 +207,7 @@ header {
     max-width: 800px;
     border-radius: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
 }
@@ -214,16 +218,11 @@ header {
 
 .concert-title {
     font-weight: 700;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
     font-size: 1.1rem;
 }
 
-.concert-date {
-    font-size: 0.9rem;
-    opacity: 0.9;
-}
-
-.concert-venue {
+.concert-text {
     font-size: 0.9rem;
     opacity: 0.9;
 }
@@ -339,7 +338,17 @@ footer {
 }
 
 /* Адаптация под мобильные устройства */
+@media (min-width: 769px) {
+    .mobile {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
+    .desktop {
+        display: none;
+    }
+
     .gallery-container:hover .gallery-prev {
         opacity: 0;
         left: 0px;
