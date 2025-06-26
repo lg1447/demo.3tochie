@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ТРОЕТОЧИЕ</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <meta name="description" content="Официальный сайт исполнителя ТРОЕТОЧИЕ">
+    <meta name="keywords" content="троеточие, 3tochie, сайт, официальный сайт, артист, музыка, исполнитель, музыкальный исполнитель">
+    <meta property="og:title" content="ТРОЕТОЧИЕ Официальный сайт">
+    <meta property="og:description" content="Официальный сайт исполнителя ТРОЕТОЧИЕ">
+    <meta property="og:url" content="https://3tochie.ru">
+    <meta property="og:site_name" content="ТРОЕТОЧИЕ">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:image" content="https://3tochie.ru/images/og-logo.png">
+    <meta property="og:type" content="website">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="canonical" href="https://3tochie.ru">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://dev.lg1447.ru/icons/logos.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <!-- <img src="/images/photo.jpg" alt="Фото исполнителя" class="artist-photo"> -->
+            <div class="gallery-container">
+                <div class="gallery-track">
+                    <!-- Фотографии будут добавлены через JS -->
+                </div>
+                <button class="gallery-prev">❮</button>
+                <button class="gallery-next">❯</button>
+                <div class="gallery-dots"></div>
+            </div>
+            <h1 class="title">ТРОЕТОЧИЕ</h1>
+            <!-- <p class="artist-tagline"></p> -->
+            <p class="bio-text" id="bio-text" onclick="document.getElementById('bio-text').classList.add('expanded'); document.getElementById('show-more').classList.add('expanded');">
+                ТРОЕТОЧИЕ (Горох Яков Дмитриевич) — музыкант и звукорежиссер из города Владивостока, начал свой путь в далеком 2018 году, но только с недавнего времени начал стремительно обретать популярность. Исполнитель работает в жанре поп-панк с элементами эмо и альтернативного рока. Среди наиболее популярных треков: «РЕЖЬ МОИ ВЕНЫ», «ЛЮБИ МЕНЯ КАК», «РЕЗИНКА», «РОМАНТИК», «КРАСНЫЙ ФЛАГ».
+            <br><br>
+                Несмотря на относительно недолгую историю проекта, ТРОЕТОЧИЕ уже успел завоевать внимание локальной аудитории. Исполнитель активно развивается, экспериментируя со звучанием и тематикой песен.
+            </p>
+            <p class="show-more" id="show-more" onclick="document.getElementById('bio-text').classList.toggle('expanded'); document.getElementById('show-more').classList.toggle('expanded');">• <i>•</i> •</p>
+        </div>
+    </header>
+
+    <div class="concert-banner">
+        <div class="concert-info">
+            <div class="concert-title">Второй сольный концерт</div>
+            <div class="concert-date">9 августа, 18:00</div>
+            <div class="concert-venue">Москва, Товарищеский пер., 4, стр. 5</div>
+            <div class="concert-venue">Клуб "СМЕНА 2.0"</div>
+        </div>
+        <a href="https://moscow.qtickets.events/173000-kontsert-troetochie" class="buy-tickets">Купить билет</a>
+    </div>
+    
+    <main>
+        <div class="container">
+            <section class="links-section">
+                <h2 class="section-title">Музыкальные платформы</h2>
+                <div class="platforms-grid">
+                    <a href="https://music.yandex.ru/artist/18798905" class="platform-link">
+                        <i class="lgi lgi-yandex-music"></i>
+                        <span class="platform-name">Яндекс Музыка</span>
+                    </a>
+                    <a href="https://vk.com/artist/troetochie" class="platform-link">
+                        <i class="lgi lgi-vk-music"></i>
+                        <span class="platform-name">ВК Музыка</span>
+                    </a>
+                    <a href="https://music.mts.ru/artist/18798905" class="platform-link">
+                        <i class="lgi lgi-mts-music_r"></i>
+                        <span class="platform-name">МТС Музыка</span>
+                    </a>
+                    <a href="https://zvuk.com/artist/212395930" class="platform-link">
+                        <i class="lgi lgi-zvuk"></i>
+                        <span class="platform-name">Звук</span>
+                    </a>
+                    <a href="https://open.spotify.com/artist/3tgwZmiN6YWRVKpaI7Mm4h" class="platform-link">
+                        <i class="lgi lgi-spotify"></i>
+                        <span class="platform-name">Спотифай</span>
+                    </a>
+                    <a href="https://music.wink.ru/artist/212395930" class="platform-link">
+                        <i class="lgi lgi-wink-music"></i>
+                        <span class="platform-name">Винк Музыка</span>
+                    </a>
+                </div>
+            </section>
+            
+            <section class="links-section">
+                <h2 class="section-title">Социальные сети</h2>
+                <div class="platforms-grid">
+                    <a href="https://vk.com/3tochie3" class="platform-link">
+                        <i class="lgi lgi-vk"></i>
+                        <span class="platform-name">ВКонтакте</span>
+                    </a>
+                    <a href="https://t.me/TROETOCHIE_TGK" class="platform-link">
+                        <i class="lgi lgi-telegram"></i>
+                        <span class="platform-name">Телеграм</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@3tochie3" class="platform-link">
+                        <i class="lgi lgi-tiktok"></i>
+                        <span class="platform-name">ТикТок</span>
+                    </a>
+                    <a href="https://www.youtube.com/@3tochie" class="platform-link">
+                        <i class="lgi lgi-youtube"></i>
+                        <span class="platform-name">Ютуб</span>
+                    </a>
+                    <a href="https://www.twitch.tv/3tochie3" class="platform-link">
+                        <i class="lgi lgi-twitch"></i>
+                        <span class="platform-name">Твич</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© lg1447 | Все права защищены</p>
+        <p>По вопросам сотрудничества не писать.</p>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

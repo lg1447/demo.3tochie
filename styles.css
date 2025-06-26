@@ -1,0 +1,492 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --accent-color: #bc41e6;
+    --accent-second-color: #8106A9;
+}
+
+body {
+    /* background-color: var(--bg-color); */
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    color: inherit;
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Хедер */
+header {
+    background: var(--bg-color);
+    background: linear-gradient(0deg, var(--bg-color) 0%, rgba(75, 8, 92, 1) 100%);
+    position: relative;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.header-image {
+    width: 100%;
+    /* max-height: 100vh; */
+    /* margin: 40px; */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
+    /* border-radius: 20px; */
+    /* border: 2px solid rgba(255, 255, 255, 0.1); */
+    margin-bottom: 40px;
+}
+
+.header-content {
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 20px;
+}
+
+/* .artist-photo {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 1/1;
+    margin: 40px auto 40px;
+    border-radius: 20px;
+    object-position: top;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+} */
+
+/* Стили галереи */
+.gallery-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    overflow: hidden;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, .5); */
+}
+
+.gallery-container:hover .gallery-prev {
+    opacity: 1;
+    left: 20px;
+}
+.gallery-container:hover .gallery-next {
+    opacity: 1;
+    right: 20px;
+}
+
+.gallery-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+    gap: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.gallery-slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.gallery-slide img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, .5); */
+}
+
+.gallery-prev, .gallery-next {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, .2);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    z-index: 10;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-prev:hover, .gallery-next:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.gallery-prev {
+    opacity: 0;
+    left: 0px;
+}
+
+.gallery-next {
+    opacity: 0;
+    right: 0px;
+}
+
+.gallery-dots {
+    position: absolute;
+    z-index: 10;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(200, 200, 200, .4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-dot.active {
+    background-color: var(--accent-color);
+    transform: scale(1.2);
+}
+
+/* Имя */
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.artist-tagline {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+/* Плашка с концертом */
+.concert-banner {
+    /* position: relative; */
+    /* z-index: 3; */
+    background: linear-gradient(135deg, var(--accent-second-color), var(--accent-color));
+    color: #000;
+    padding: 15px 25px;
+    /* margin: auto auto; */
+    margin: 20px auto 0;
+    max-width: 800px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+}
+
+.concert-info {
+    flex: 1;
+}
+
+.concert-title {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.concert-date {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.concert-venue {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.buy-tickets {
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    margin-left: 20px;
+}
+
+.buy-tickets:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+/* Основной контент */
+main {
+    position: relative;
+    background-color: #121212;
+    padding: 60px 20px;
+    z-index: 2;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to left, var(--accent-color), var(--accent-second-color));
+}
+
+.bio-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.show-more {
+    display: none;
+}
+
+/* Ссылки на платформы */
+.links-section {
+    margin-bottom: 60px;
+}
+
+.platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.platform-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 15px 10px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.platform-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.lgi {
+    font-size: 40px;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+
+.platform-name {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+    .gallery-container:hover .gallery-prev {
+        opacity: 0;
+        left: 0px;
+    }
+    
+    .gallery-container:hover .gallery-next {
+        opacity: 0;
+        right: 0px;
+    }
+
+    .gallery-prev, .gallery-next {
+        opacity: 0;
+        width: 20%;
+        height: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .gallery-dots {
+        gap: 8px;
+        bottom: 20px;
+    }
+    
+    .gallery-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+    
+    .artist-tagline {
+        font-size: 1rem;
+    }
+    
+    .concert-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        margin: 50px 20px 0;
+    }
+    
+    .buy-tickets {
+        margin: 15px 0 0;
+        width: 100%;
+    }
+    
+    .platforms-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .bio-text {
+        font-size: .9rem;
+        max-height: 4.5rem;
+        transition: max-height 2s ease;
+        overflow: hidden;
+    }
+
+    .bio-text::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 30%;
+        background: linear-gradient(to top, var(--bg-color) 30%, transparent 100%);
+        transition: opacity 1s ease;
+    }
+
+    .bio-text.expanded {
+        max-height: 25rem;
+    }
+
+    .bio-text.expanded::before {
+        opacity: 0;
+    }
+
+    .show-more {
+        display: block;
+        font-size: 3rem;
+        opacity: .9;
+        max-height: 5rem;
+    }
+
+    .show-more i {
+        display: inline-block;
+        transform: translateY(.4em);
+        transition: transform 1s ease;
+    }
+
+    .show-more.expanded i {
+        transform: translateY(-.4em);
+    }
+
+    /* .show-more.expanded {
+        opacity: 0;
+        max-height: 0rem;
+    } */
+}
+
+@media (max-width: 480px) {
+    .gallery-dots {
+        gap: 6px;
+    }
+    
+    .gallery-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .artist-photo {
+        width: 100%;
+        /* height: 150px; */
+    }
+    
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .concert-banner {
+        margin: 40px 15px 0;
+    }
+    
+    .platforms-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bio-text {
+        transition: max-height 2s ease;
+    }
+
+    .bio-text.expanded {
+        max-height: 28rem;
+    }
+}
+
+@media (max-width: 359px) {
+    .bio-text {
+        transition: max-height 3s ease;
+    }
+
+    .bio-text.expanded {
+        max-height: 40rem;
+    }
+}
